@@ -10,6 +10,7 @@
 require 'faker'
 require 'lipsum'
 
+puts 'Creating Restaurants'
 5.times do
   Restaurant.create!(
     name: Faker::Restaurant.name,
@@ -18,9 +19,10 @@ require 'lipsum'
     category: %w[chinese italian japanese french belgian].sample
   )
 end
-
 puts 'Restaurants created'
 
+
+puts 'Creating Reviews'
 5.times do
   Review.create!(
     content: Faker::Lorem.word,
