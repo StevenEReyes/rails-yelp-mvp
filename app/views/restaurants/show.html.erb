@@ -1,0 +1,16 @@
+<h1><%= @restaurant.name %></h1>
+
+<div class="restaurant-details">
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+
+<h2>Reviews:</h2>
+  <div>
+    <% @restaurant.reviews.each do |review| %>
+      <ul><%= review.rating %></ul>
+      <ul><%= review.content %></ul>
+    <% end %>
+  </div>
+
+</div>
